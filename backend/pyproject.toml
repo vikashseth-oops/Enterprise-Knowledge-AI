@@ -1,0 +1,24 @@
+[project]
+name = "enterprise-knowledge-ai-backend"
+version = "1.0.0"
+description = "Enterprise Knowledge AI: Cloud-Native Agentic RAG Platform"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = [
+    "B008",  # FastAPI Depends
+    "E501",  # Line length
+    "E402",  # Module level import not at top (needed for sys.path prepends in scripts)
+    "F841",  # Local variable unused
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]

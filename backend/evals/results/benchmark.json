@@ -1,0 +1,13 @@
+{
+  "concurrency": 5,
+  "total_requests": 100,
+  "total_duration_seconds": 2.09,
+  "throughput_rps": 47.88,
+  "latency_ms": {
+    "p50": 12.09,
+    "p90": 20.69,
+    "p95": 26.86,
+    "p99": 36.37,
+    "avg": 13.93
+  }
+}
