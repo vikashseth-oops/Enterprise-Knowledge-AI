@@ -30,9 +30,11 @@ jobs:
           ruff check .
 
       - name: Run Backend Tests with Coverage
+        working-directory: backend
+        env:
+        PYTHONPATH: .
         run: |
-          cd backend
-          pytest tests --cov=app --cov-report=term-missing
+          python -m pytest --cov=app --cov-report=term-missing
 
       - name: Run Evaluation Quality Gate (Recall@5 >= 80%)
         run: |
